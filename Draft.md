@@ -1,12 +1,13 @@
 The New Sugar In Your JavaScript
 =================================
+Group Members: Nicandro Flores, Megan Greening, and Brian McWilliams.
 
 TC39, the team tasked with the reponsibility of writing the new ECEMAScript 6 (ES6) spcification, is currently hard at work tyring to meet their late 2013 release deadline. In approximately six months Node.js will begin embracing the newly proposed specification, browsers will begin popping up messages asking users upgrade their browsers, and JavaScript (JS) programmers will stand divided with TC39's decision to include a new class syntax into the language. 
 
 The Prototypla Way
 ------------------
 
-Dispite JS being an object oriented languag it does not have syntax to create classes in the conventional way programmers are used to, such as in Java. But the ECMAScript does state, that program state and methods are carried by objects and structure and behavior are both inherited. So, even though class syntax such as "class" and "extends" do not exist in JS, there must be a way to simulate the idea of classes in JS. 
+Despite JS being an object oriented languag it does not have syntax to create classes in the conventional way programmers are used to, such as in Java. But the ECMAScript does state, that program state and methods are carried by objects and structure and behavior are both inherited. So, even though class syntax such as "class" and "extends" do not exist in JS, there must be a way to simulate the idea of classes in JS. 
 
 JS function objects are highly versatile. They are first class citizens, thus are treated like data just as classes are in other class based languages. For example, functions in JS can be used as templates to construct other objects. The templated objects are easily created using the 'new' operator. In addition, they come pre-equipped with hidden properties and methods. One of these properties is the 'prototype' property, with these three tools programmers can simulate prototyped-based calsses. 
 
