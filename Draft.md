@@ -2,7 +2,7 @@ The New Sugar In Your JavaScript
 =================================
 Group Members: Nicandro Flores, Megan Greening, and Brian McWilliams.
 
-ECMAScript is an internationally standardized specification for scripting languages.  Many client side languages such as JavaScript(JS) and ActionScript are derived from it.  TC39 is a working group tasked with the responsibility of writing the new ECEMAScript 6 (ES6) specification, with a late 2013 target release. In approximately six months Node.js will begin embracing the newly proposed specification, browsers will begin popping up messages asking users upgrade their browsers, and JavaScript (JS) programmers will stand divided with TC39's decision to include a new class syntax into the language. 
+ECMAScript is an internationally standardized specification for scripting languages.  Many client side languages such as JavaScript(JS) and ActionScript are derived from it.  TC39 is a working group tasked with the responsibility of writing the new ECEMAScript 6 (ES6) specification[1], with a late 2013 target release. In approximately six months Node.js will begin embracing the newly proposed specification, browsers will begin popping up messages asking users upgrade their browsers, and JavaScript (JS) programmers will stand divided with TC39's decision to include a new class syntax into the language. 
 The Prototypla Way
 ------------------
 
@@ -68,3 +68,6 @@ Slides for talk
 >> mention how the new syntax is just sugar for what we are used to doing
 >> mention how the new syntax works
 >> don't allow time for questions! haha
+
+### Citations
+[1] Draft Specification for ES.next (Ecma-262 Edition 6) [Online] Available: http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts
