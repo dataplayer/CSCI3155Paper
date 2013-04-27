@@ -6,11 +6,7 @@ ECMAScript is an internationally standardized specification for scripting langua
 The Prototypla Way
 ------------------
 
-<<<<<<< HEAD
-Despite JS being an object oriented language it does not have syntax to create classes in the conventional way programmers are used to, such as in Java. But the ECMAScript does state, that program state and methods are carried by objects and structure and behavior are both inherited. So, even though class syntax such as "class" and "extends" do not exist in JS, there must be a way to simulate the idea of classes in JS. 
-=======
 Despite JS being an object oriented language it does not have syntax to create classes in the conventional way programmers are used to, such as in Java. ECMAScript does specify that program state and methods are carried by objects, and that structure and behavior are both inherited. Therefore, even though class syntax such as "class" and "extends" do not exist in JS, there must be a way to simulate the idea of classes in JS. 
->>>>>>> d8d092f5b91ea2c204a5a1c9180b9ba93d960953
 
 JS function objects are highly versatile. They are first class citizens, thus are treated like data just as classes are in other class based languages. For example, functions in JS can be used as templates to construct other objects. The templated objects are easily created using the 'new' operator. In addition, they come pre-equipped with hidden properties and methods. One of these properties is the 'prototype' property, with these three tools programmers can simulate prototyped-based classes. 
 
