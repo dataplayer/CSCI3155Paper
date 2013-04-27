@@ -7,7 +7,7 @@ TC39, the team tasked with the reponsibility of writing the new ECEMAScript 6 (E
 The Prototypla Way
 ------------------
 
-Despite JS being an object oriented languag it does not have syntax to create classes in the conventional way programmers are used to, such as in Java. But the ECMAScript does state, that program state and methods are carried by objects and structure and behavior are both inherited. So, even though class syntax such as "class" and "extends" do not exist in JS, there must be a way to simulate the idea of classes in JS. 
+Despite JS being an object oriented language it does not have syntax to create classes in the conventional way programmers are used to, such as in Java. But the ECMAScript does state, that program state and methods are carried by objects and structure and behavior are both inherited. So, even though class syntax such as "class" and "extends" do not exist in JS, there must be a way to simulate the idea of classes in JS. 
 
 JS function objects are highly versatile. They are first class citizens, thus are treated like data just as classes are in other class based languages. For example, functions in JS can be used as templates to construct other objects. The templated objects are easily created using the 'new' operator. In addition, they come pre-equipped with hidden properties and methods. One of these properties is the 'prototype' property, with these three tools programmers can simulate prototyped-based calsses. 
 
@@ -44,6 +44,7 @@ Arguments for
 >> similar to what other seasoned programmers are used to
 >> Lost of discussion here:
 >> https://mail.mozilla.org/pipermail/es-discuss/2012-May/thread.html#22825
+Progammers working in other languages are used to be able to work with classes in their code. By adding this functionality, JS would be brought closer into line with other languages. It seems like there is popular support in the JS community for adding classes. However, as with any new modification, there is some concern over how classes will be implemented.
 
 
 Arguments against
