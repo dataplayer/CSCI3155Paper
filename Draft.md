@@ -4,6 +4,8 @@ Group Members: Nicandro Flores, Megan Greening, and Brian McWilliams.
 
 TC39, the team tasked with the reponsibility of writing the new ECEMAScript 6 (ES6) spcification, is currently hard at work tyring to meet their late 2013 release deadline. In approximately six months Node.js will begin embracing the newly proposed specification, browsers will begin popping up messages asking users upgrade their browsers, and JavaScript (JS) programmers will stand divided with TC39's decision to include a new class syntax into the language. 
 
+Test change.
+
 The Prototypla Way
 ------------------
 
