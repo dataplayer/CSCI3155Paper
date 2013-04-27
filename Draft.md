@@ -57,7 +57,7 @@ While it seems like the general consensus in the field is that adding classes to
 
 The addition of classes is merely a simplified way of using the features already avaialbe to JS. Many feel that you should just learn how to use the syntax already available to you. No major change is occuring - in essence, all that is happening is the the underworkings of the code are being hidden by the new class syntax. Prototypal inheritance is not that confusing once you start getting down to the details of it - and it even allows for inheritance.
 
->> Megan: I would like to either include a code snippet here or refer to a piece of code that we used in a earlier part of the paper. I'll probably pop my own snippet in for. We can always pare it down later!
+>> Megan: I would like to either include a code snippet here or refer to a piece of code that we used in a different part of the paper. I have popped my own snippet in for now. We can always pare it down later! Most of this code and information comes from: http://www.2ality.com/2011/11/javascript-classes.html
 
 In fact, there are those in the field who argue that ptrotypal inheritance is even simpler than inheritance in classes. One such individual is Dr. Axel Rauschmayer. He provides the following code as an example:
 
@@ -77,7 +77,7 @@ In fact, there are those in the field who argue that ptrotypal inheritance is ev
     
     console.log(jane.describe()); // Person called Jane
 
-He goes on to explain that "jane and tarzan share the same prototype PersonProto which provides method describe() to both of them. Note how similar PersonProto is to a class. "
+He goes on to explain that "jane and tarzan share the same prototype PersonProto which provides method describe() to both of them. Note how similar PersonProto is to a class. " Essentially this protypal way of handling 
 
 JS uses constructors (also called constructor functions) to generate instances of objects or prototypes. Building from the same example as above, we have the following:
 
@@ -96,7 +96,9 @@ JS uses constructors (also called constructor functions) to generate instances o
 
     console.log(jane.describe()); // Person called Jane
 
-The constructor Person sets up a new instance of a person using "new". Any instances set up using this function share the prototype Person.prototype and can use functions the protype includes.
+The constructor Person sets up a new instance of a person using "new". Any instances set up using this function share the prototype Person.prototype and can use functions the protype includes. This is the same way that inheritance works in classes in other languages, we just do not call anything a "class" in JS.
+
+>> This gets into something that Dr. R. and others call exemplars. I don't think we should get into that - it seems beyond the scope of this paper. However, I could certainly include that kind of information if we end up needing it.
 
 Concluson
 --------- 
