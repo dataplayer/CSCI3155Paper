@@ -69,5 +69,6 @@ Slides for talk
 >> mention how the new syntax works
 >> don't allow time for questions! haha
 
-### Citations
+Citations
+---------
 [1] Draft Specification for ES.next (Ecma-262 Edition 6) [Online] Available: http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts
