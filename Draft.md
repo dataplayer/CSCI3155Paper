@@ -2,8 +2,7 @@ The New Sugar In Your JavaScript
 =================================
 Group Members: Nicandro Flores, Megan Greening, and Brian McWilliams.
 
-ECMAScript is an internationally standardized specification for scripting languages.  Many client side languages such as JavaScript(JS) and ActionScript are derived from it.  TC39 is a working group tasked with the responsibility of writing the new ECEMAScript 6 (ES6) specification, with a late 2013 target release. In approximately six months Node.js will begin embracing the newly proposed specification, browsers will begin popping up messages asking users upgrade their browsers, and JavaScript (JS) programmers will stand divided with TC39's decision to include a new class syntax into the language. 
-
+ECMAScript is an internationally standardized specification for scripting languages.  Many client side languages such as JavaScript(JS) and ActionScript are derived from it.  TC39 is a working group tasked with the responsibility of writing the new ECEMAScript 6 (ES6) specification[1], with a late 2013 target release. In approximately six months Node.js will begin embracing the newly proposed specification, browsers will begin popping up messages asking users upgrade their browsers, and JavaScript (JS) programmers will stand divided with TC39's decision to include a new class syntax into the language. 
 The Prototypla Way
 ------------------
 
@@ -44,6 +43,7 @@ Arguments for
 >> similar to what other seasoned programmers are used to
 >> Lost of discussion here:
 >> https://mail.mozilla.org/pipermail/es-discuss/2012-May/thread.html#22825
+Progammers working in other languages are used to be able to work with classes in their code. By adding this functionality, JS would be brought closer into line with other languages. It seems like there is popular support in the JS community for adding classes. However, as with any new modification, there is some concern over how classes will be implemented.
 
 
 Arguments against
@@ -52,7 +52,10 @@ Arguments against
 >> lost of arguments here:
 http://www.nczonline.net/blog/2012/10/16/does-javascript-need-classes/
 >> This will clearly needed to be edited for clarity, but I really wanted to get some ideas in writing. -MG
-While it seems like the general consensus in the field is that adding classes to JS will be a good thing, there are those who do not see a need for classes. Many people argue that you do not need classes in JS because there are already ways to effectively create "classes" through the use of constructors to define custom reference types. Furthermore, they feel that common features of classes (subclasses, superclasses, inheritance, etc) tend to cause additional confusion. You can already create sustom reference types and all this change will do is to add unecessary syntactic sugar. Since the addition of classes does not alter how JS works, why bother adding it?
+
+While it seems like the general consensus in the field is that adding classes to JS will be a good thing, there are those who do not see a need for classes. Many people argue that you do not need classes in JS because there are already ways to effectively create "classes" through the use of constructors to define custom reference types. Furthermore, they feel that common features of classes (subclasses, superclasses, inheritance, etc) tend to cause additional confusion. You can already create custom reference types and all this change will do is to add unecessary syntactic sugar. Since the addition of classes does not alter how JS works, why bother adding it?
+
+The addition of classes is merely a simplified way of using the features already avaialbe to JS. Many feel that you should just learn how to use the syntax already available to you. No major change is occuring - in essence, all that is happening is the the underworkings of the code are being hidden by the new class syntax. Prototypal inheritance is not that confusing once you start getting down to the details of it - and it even allows for inheritance.
 
 Concluson
 --------- 
@@ -68,3 +71,7 @@ Slides for talk
 >> mention how the new syntax is just sugar for what we are used to doing
 >> mention how the new syntax works
 >> don't allow time for questions! haha
+
+Citations
+---------
+[1] Draft Specification for ES.next (Ecma-262 Edition 6) [Online] Available: http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts
