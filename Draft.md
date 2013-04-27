@@ -57,6 +57,47 @@ While it seems like the general consensus in the field is that adding classes to
 
 The addition of classes is merely a simplified way of using the features already avaialbe to JS. Many feel that you should just learn how to use the syntax already available to you. No major change is occuring - in essence, all that is happening is the the underworkings of the code are being hidden by the new class syntax. Prototypal inheritance is not that confusing once you start getting down to the details of it - and it even allows for inheritance.
 
+>> Megan: I would like to either include a code snippet here or refer to a piece of code that we used in a earlier part of the paper. I'll probably pop my own snippet in for. We can always pare it down later!
+
+In fact, there are those in the field who argue that ptrotypal inheritance is even simpler than inheritance in classes. One such individual is Dr. Axel Rauschmayer. He provides the following code as an example:
+
+    var PersonProto = {
+        describe: function () {
+            return "Person called "+this.name;
+        },
+    };
+    var jane = {
+        __proto__: PersonProto,
+        name: "Jane",
+    };
+    var tarzan = {
+        __proto__: PersonProto,
+        name: "Tarzan",
+    };
+    
+    console.log(jane.describe()); // Person called Jane
+
+He goes on to explain that "jane and tarzan share the same prototype PersonProto which provides method describe() to both of them. Note how similar PersonProto is to a class. "
+
+JS uses constructors (also called constructor functions) to generate instances of objects or prototypes. Building from the same example as above, we have the following:
+
+    // Constructor: set up the instance
+    function Person(name) {
+        this.name = name;
+    }
+
+    // Prototype: shared by all instances
+    Person.prototype.describe = function () {
+        return "Person called "+this.name;
+    };
+
+    var jane = new Person("Jane");
+    console.log(jane instanceof Person); // true
+
+    console.log(jane.describe()); // Person called Jane
+
+The constructor Person sets up a new instance of a person using "new". Any instances set up using this function share the prototype Person.prototype and can use functions the protype includes.
+
 Concluson
 --------- 
 
