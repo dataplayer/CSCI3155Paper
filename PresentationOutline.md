@@ -27,7 +27,7 @@ Part III
 
 - Those for the new syntax point to the fact that is can simplfiy things a lot (shorter code, etc).
 - Adding this syntax will bring JS more in line with what people are used to from other languages.
-= If you love the prototypal way of doing things you can continue to use it.
+- If you love the prototypal way of doing things you can continue to use it.
 
 Conclusion
 ==========
