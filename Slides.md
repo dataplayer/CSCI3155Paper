@@ -44,7 +44,6 @@ Maximally Minimal Classes - What Do Classes Need?
 7
 Formal Class Grammar
 ====================
-Slide #8:
 <Note/speaking> When we began gathering resources for this topic, we were suprised to be able to apply what we just learned.  The task group was describing the new feature in Backus–Naur Form.   Here we see the top level Class definition.  It is a little harder to make out than what we did, but we can see that ClassDeclaration returns a Binding Identifier and a Class Tail, then a ClassTail.
 <End speaking><p>
 <center>Class BNF</center>
@@ -69,29 +68,6 @@ MethodDefinition :
 July 26, 2012 TC39 Meeting Notes Allen Wirfs-Brock http://t.co/PwuF12Y0
 </align>
 
-Slide #9:
-<Note/Speaking>
-The working group in their documentation didn't use cryptic (but mathmatically precise) notations, but we definatly see the parsing of judgement forms.  Read through the ConstructorMethod instance.  We did this in every lab.
-<End speaking>
-<pre>
-Static Semantics: ConstructorMethod
-ClassBody : ClassElementList
-1. Let list be PrototypeMethodDefinitions of ClassElementList.
-2. For each MethodDefinition m in list, do
-  a. If PropName of m is ″constructor″, return m.
-3. Return empty.
-NOTE Early Error rules ensure that there is only one method definition named ″constructor″ and that it isn’t an 
-accessor property or generator definition.
-
-Static Semantics: Contains
-With parameter symbol.
-ClassTail : ClassHeritageopt { ClassBody }
-1. If symbol is ClassBody, return true.
-2. If ClassHeritage is not present, return false.
-3. If symbol is ClassHeritage, return true.
-4. Return the result of Contains for ClassHeritage with argument symbol.
-NOTE Static semantic rules that depend upon substructure generally do not look into class bodies.
-</pre>
 From Prototype to Class
 =======================
 *Put code here that relates to previous code, discuss differences
@@ -115,28 +91,43 @@ Pros
 14
 
 15
-Arguments Against
-=================
-*Why add something to JS that we can already do?
-*Remember, protypal classes are available and they work!
+Main Arguments Against
+======================
+*JS already has "class" functionality.
+*Prototypal classes are available and they work.
+*No point in maximally minimal classes.
 
 16
-Additional Confusion
-====================
-*Adding classes creates two main areas of confusion
-*Adding common features of classes (inheritance, subclasses, etc) add confusion
-*There will be TWO ways of creating classes and that may lead to errors later on
+Classes May Add Confusion
+=================================
+*Adding common features of classes (inheritance, subclasses, etc) will add confusion to JS.
+*There will be TWO ways of creating classes and that may lead to errors later on.
 
 17
-Why The Prototypal Way Is Good
-==============================
-*Code snippet that show it is essentially the same as classes
+Prototypal Classes Work
+=======================
+From Dr. Axel Rauschmayer:
+    var PersonProto = {
+        describe: function () {
+            return "Person called "+this.name;
+        },
+    };
+    var jane = {
+        __proto__: PersonProto,
+        name: "Jane",
+    };
+    var tarzan = {
+        __proto__: PersonProto,
+        name: "Tarzan",
+    };
+    
+    console.log(jane.describe()); // Person called Jane
 
 18
 What's the Point of Minimal Classes?
 ====================================
 *Minimal classes are limited.
-*Classes may be introduced in late 2013, but it will take a lot of time before they are in regular use.
+*They will not be in regular use for quite awhile.
 
 19
 Conclusion
