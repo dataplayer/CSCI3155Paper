@@ -115,17 +115,17 @@ From Dr. Axel Rauschmayer:
             return "Person called "+this.name;
         },
     };
-    var jane = {
+    var jim = {
         __proto__: PersonProto,
-        name: "Jane",
+        name: "Jim",
     };
-    var tarzan = {
+    var dana = {
         __proto__: PersonProto,
-        name: "Tarzan",
+        name: "Dana",
     };
     
-    console.log(jane.describe()); // Person called Jane
-<pre>
+    console.log(jim.describe()); // Person called Jim
+</pre>
 
 18
 What's the Point of Minimal Classes?
