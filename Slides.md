@@ -108,7 +108,7 @@ Classes May Add Confusion
 17
 Prototypal Classes Work
 =======================
-From Dr. Axel Rauschmayer:
+Adapted from Dr. Axel Rauschmayer:
 <pre>
     var PersonProto = {
         describe: function () {
@@ -126,12 +126,19 @@ From Dr. Axel Rauschmayer:
     
     console.log(jim.describe()); // Person called Jim
 </pre>
+October 21, 2012 - http://www.2ality.com/2011/11/javascript-classes.html
 
 18
 What's the Point of Minimal Classes?
 ====================================
+From Rick Waldren
+<pre>
+Attempting to extend this proposal is likely to result in dead-lock that would result in the inclusion of no class definition support in “ES6”. 
+</pre>
 *Minimal classes are limited.
 *They will not be in regular use for quite awhile.
+
+January 18, 2013 - http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes
 
 19
 Conclusion
