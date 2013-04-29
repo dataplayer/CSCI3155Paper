@@ -44,6 +44,7 @@ Maximally Minimal Classes - What Do Classes Need?
 7
 Formal Class Grammar
 ====================
+Slide #8:
 <Note/speaking> When we began gathering resources for this topic, we were suprised to be able to apply what we just learned.  The task group was describing the new feature in Backus–Naur Form.   Here we see the top level Class definition.  It is a little harder to make out than what we did, but we can see that ClassDeclaration returns a Binding Identifier and a Class Tail, then a ClassTail.
 <End speaking><p>
 <center>Class BNF</center>
@@ -68,6 +69,29 @@ MethodDefinition :
 July 26, 2012 TC39 Meeting Notes Allen Wirfs-Brock http://t.co/PwuF12Y0
 </align>
 
+Slide #9:
+<Note/Speaking>
+The working group in their documentation didn't use cryptic (but mathmatically precise) notations, but we definatly see the parsing of judgement forms.  Read through the ConstructorMethod instance.  We did this in every lab.
+<End speaking>
+<pre>
+Static Semantics: ConstructorMethod
+ClassBody : ClassElementList
+1. Let list be PrototypeMethodDefinitions of ClassElementList.
+2. For each MethodDefinition m in list, do
+  a. If PropName of m is ″constructor″, return m.
+3. Return empty.
+NOTE Early Error rules ensure that there is only one method definition named ″constructor″ and that it isn’t an 
+accessor property or generator definition.
+
+Static Semantics: Contains
+With parameter symbol.
+ClassTail : ClassHeritageopt { ClassBody }
+1. If symbol is ClassBody, return true.
+2. If ClassHeritage is not present, return false.
+3. If symbol is ClassHeritage, return true.
+4. Return the result of Contains for ClassHeritage with argument symbol.
+NOTE Static semantic rules that depend upon substructure generally do not look into class bodies.
+</pre>
 From Prototype to Class
 =======================
 *Put code here that relates to previous code, discuss differences
