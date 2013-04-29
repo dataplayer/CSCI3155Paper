@@ -107,6 +107,7 @@ Classes May Add Confusion
 Prototypal Classes Work
 =======================
 From Dr. Axel Rauschmayer:
+<pre>
     var PersonProto = {
         describe: function () {
             return "Person called "+this.name;
@@ -122,6 +123,7 @@ From Dr. Axel Rauschmayer:
     };
     
     console.log(jane.describe()); // Person called Jane
+<pre>
 
 18
 What's the Point of Minimal Classes?
