@@ -44,10 +44,30 @@ Maximally Minimal Classes - What Do Classes Need?
 7
 Formal Class Grammar
 ====================
-*Yes, what we learned is applicable in the real world!
-*Insert partial grammar here and hit a point or two.
+<Note/speaking> When we began gathering resources for this topic, we were suprised to be able to apply what we just learned.  The task group was describing the new feature in Backus–Naur Form.   Here we see the top level Class definition.  It is a little harder to make out than what we did, but we can see that ClassDeclaration returns a Binding Identifier and a Class Tail, then a ClassTail.
+<End speaking><p>
+<center>Class BNF</center>
+<pre>
+ClassDeclaration: class BindingIdentifier ClassTail
+ClassExpression: class BindingIdentifieropt ClassTail
+ClassTail: ClassHeritageopt{ ClassBodyopt}
+ClassHeritage : extends AssignmentExpression 
+ClassBody: ClassElementList 
+ClassElementList: 
+    ClassElement 
+    ClassElementList ClassElement 
+ClassElement:
+    MethodDefinition;
+MethodDefinition :
+    PropertyName(FormalParameterList) {FunctionBody}
+    *PropertyName(FormalParameterList){FunctionBody}
+    get PropertyName ( ){FunctionBody}
+    set PropertyName(PropertySetParameterList) {FunctionBody}
+</pre>
+<align = right>
+July 26, 2012 TC39 Meeting Notes Allen Wirfs-Brock http://t.co/PwuF12Y0
+</align>
 
-8
 From Prototype to Class
 =======================
 *Put code here that relates to previous code, discuss differences
