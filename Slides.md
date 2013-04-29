@@ -133,7 +133,8 @@ What's the Point of Minimal Classes?
 ====================================
 From Rick Waldren
 <pre>
-Attempting to extend this proposal is likely to result in dead-lock that would result in the inclusion of no class definition support in “ES6”. 
+Attempting to extend this proposal is likely to result in dead-lock that 
+would result in the inclusion of no class definition support in “ES6”. 
 </pre>
 *Minimal classes are limited.
 *They will not be in regular use for quite awhile.
