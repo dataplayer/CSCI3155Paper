@@ -138,6 +138,21 @@ MethodDefinition :
 July 26, 2012 TC39 Meeting Notes Allen Wirfs-Brock http://t.co/PwuF12Y0
 </align>
 
+Slide #9:
+<Note/Speaking>
+The working group in their documentation didn't use cryptic (but mathmatically precise) notations, but we definatly see the parsing of judgement forms.  Read through the ConstructorMethod instance.  We did this in every lab.
+<End speaking>
+<pre>
+Static Semantics: ConstructorMethod
+ClassBody : ClassElementList
+1. Let list be PrototypeMethodDefinitions of ClassElementList.
+2. For each MethodDefinition m in list, do
+  a. If PropName of m is ″constructor″, return m.
+3. Return empty.
+NOTE Early Error rules ensure that there is only one method definition named ″constructor″ and that it isn’t an 
+accessor property or generator definition.
+</pre>
+
 From Prototype to Class
 =======================
 
