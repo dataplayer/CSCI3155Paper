@@ -140,14 +140,43 @@ July 26, 2012 TC39 Meeting Notes Allen Wirfs-Brock http://t.co/PwuF12Y0
 
 From Prototype to Class
 =======================
-*Put code here that relates to previous code, discuss differences
 
-9
+~~~~javascript
+// Supertype
+    class Person {
+        constructor(name) {
+            this.name = name;
+        }
+        describe() {
+            return "Person called "+this.name;
+        }
+    }
+    // Subtype
+    class Employee extends Person {
+        constructor(name, title) {
+            super.constructor(name);
+            this.title = title;
+        }
+        describe() {
+            return super.describe() + " (" + this.title + ")";
+        }
+    }
+~~~~
+
 How Classes Will Be Used
 ========================
-*Put code that shows how classes work.
+~~~~Javascript
+    > let prof = new Employee("Jim Baker", "code slinging Ninja");
 
-10
+    > prof instanceof Person
+    true
+    > prof instanceof Employee
+    true
+    > prof.describe()
+      Hi I am a Person and my name is: Jim Baker, 
+      I am a code slinging Ninja!
+~~~~
+
 Pros
 ====
 *I'll leave several sections blank - we can move stuff around as we need to.
