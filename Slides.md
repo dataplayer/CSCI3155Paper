@@ -179,9 +179,29 @@ How Classes Will Be Used
 
 Pros
 ====
-*I'll leave several sections blank - we can move stuff around as we need to.
+(Slide 1)
+<talk>
+We all have been taught that OOP is great, and that all code should follow the various patterrns described by the Gang of 4.  We've already seen the concepts of sup/superclasses are key.  As Peter Michaux described it:
+</talk>
+<pre>
+"When they arrive to JavaScript their concepts of how an object-oriented language works no longer apply they 
+learn that their big OOP investment was not complete."
 
-11
+http://michaux.ca/articles/transitioning-from-java-classes-to-javascript-prototypes
+</pre>
+
+(Slide 2)
+<talk>Prototype-based inheritance does appear in the famous Gang of Four Design Patterns book but it is not one of the more widely employed patterns in programs using languages with class-based inheritance. There are very few books showing how to use prototype-based inheritance well.
+</talk>
+
+
+<pre>
+<align = center> Professional Learning Resources</align>
+Amazon.com books that refer to "prototype inheritance javascript":
+    14
+Amazon.com books that refer to "class inheritance":
+    3,001
+</pre>
 
 12
 
