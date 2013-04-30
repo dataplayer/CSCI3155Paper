@@ -1,20 +1,20 @@
-I wasn't comfortable with the html file that Nic sent out, so I started work in in MD. I left numbers in just to indicate what I was thinking of including on each slide. Clearly we'll need to move things around and modify them - and delete the numbers.
 
-1
-Classes: The New Sugar in JavaScript
+New Class Syntax in JavaScript
 ====================================
 
 By Nicandro Flores, Megan Greening, and Brian McWilliams
---------------------------------------------------------
+Our paper and presentation slides are on github
+https://github.com/Meglet/CSCI3155Paper
 
-2
+Outline
+-------
+ + Background on our topic
+ + Old vs. New Syntax
+ + Pros and Cons
+
+
 How did we get here?
 ====================
-
-*ECMAScript is a specification for scripting languages
-*TC39 is tasked with writing the new spec, called Harmony or ECMAScript 6 (ES6)
-*Classes will be added in Harmony
-* Programmers are divided on whether or not this is a good thing
 
 The JavaScript Specification
 
@@ -27,13 +27,10 @@ The JavaScript Specification
  + The new spec will be out in late 2013
 
 
-3
-The Prototype Way
-==================
+Prototype chain diagram
+------------------------
+![Image](prototypechain.jpg?raw=true)
 
-
-*Classes can be simulated in JS since objects are highly versatile
-*"Prototype" is the property that allows programmers to simluate protoype-based classes
 
 Constructor Functions
 ---------------------
@@ -76,7 +73,7 @@ Prototype Inheritance
       }
 ~~~~
 
-Now let make some instances of these objects/classes
+Now let's make some instances of these objects/classes
 ----------------------------------------------------
 
 ~~~~javascript
@@ -92,26 +89,19 @@ Now let make some instances of these objects/classes
 ~~~~
 
 
-4
-Code Example of Prototypes
-==========================
-*Some or all of the employee example? This might be two slides' worth.
+Maximally Minimal Classes
+-------------------------
 
-5
-More Code to Complete Protype Discussion
-========================================
+ + A Class keyword
+ + A body that includes the constructor function and instance methods
+ + Cand declare a class as a subclass of another class using extends
+ + Super is available from any of the methods or the constructor
 
-6
-Maximally Minimal Classes - What Do Classes Need?
-=================================================
-*A Class keyword 
-*A body that includes the constructor function and instance methods
-*Cand declare a class as a subclass of another class using extends
-*Super is available from any of the methods or the constructor
 
 7
 Formal Class Grammar
-====================
+--------------------
+
 <Note/speaking> When we began gathering resources for this topic, we were suprised to be able to apply what we just learned.  The task group was describing the new feature in Backus–Naur Form.   Here we see the top level Class definition.  It is a little harder to make out than what we did, but we can see that ClassDeclaration returns a Binding Identifier and a Class Tail, then a ClassTail.
 <End speaking><p>
 <center>Class BNF</center>
@@ -136,75 +126,113 @@ MethodDefinition :
 July 26, 2012 TC39 Meeting Notes Allen Wirfs-Brock http://t.co/PwuF12Y0
 </align>
 
-From Prototype to Class
-=======================
-*Put code here that relates to previous code, discuss differences
+Parsing of Judgement Forms
+--------------------------
+<pre>
+Static Semantics: ConstructorMethod
+ClassBody : ClassElementList
+  1. Let list be PrototypeMethodDefinitions of ClassElementList.
+  2. For each MethodDefinition m in list, do
+    a. If PropName of m is ″constructor″, return m.
+  3. Return empty.
 
-9
+Static Semantics: Contains
+ClassTail : ClassHeritageopt { ClassBody }
+1. If symbol is ClassBody, return true.
+2. If ClassHeritage is not present, return false.
+3. If symbol is ClassHeritage, return true.
+4. Return the result of Contains for ClassHeritage 
+   with argument symbol.
+</pre>
+
+
+From Prototype to Classes
+-------------------------
+<pre>
+// Supertype
+    class Person {
+        constructor(name) { this.name = name; }
+        describe() { return "Person called "+this.name; }
+    }
+// Subtype
+    class Employee extends Person {
+        constructor(name, title) {
+            super.constructor(name);
+            this.title = title;
+        }
+        describe() { return super.describe() + this.title; }
+    }
+</pre>
+
+
 How Classes Will Be Used
-========================
-*Put code that shows how classes work.
+------------------------
 
-10
-Pros
-====
-*I'll leave several sections blank - we can move stuff around as we need to.
+~~~~javascript
+> let prof = new Employee("Jim Baker", "code slinging Ninja");
+> prof instanceof Person
+  true
+> prof instanceof Employee
+  true
+> prof.describe()
+  Hi I am a Person and my name is: Jim Baker, 
+  I am a code slinging Ninja!
+~~~~
 
-11
 
-12
 
-13
 
-14
-
-15
 Main Arguments Against
-======================
-*JS already has "class" functionality.
-*Prototypal classes are available and they work.
-*No point in maximally minimal classes.
+----------------------
 
-16
-Classes May Add Confusion
-=================================
-*Adding common features of classes (inheritance, subclasses, etc) will add confusion to JS.
-*There will be TWO ways of creating classes and that may lead to errors later on.
+The new syntax will add complexity
+It is just sugar
+Minimal classes are redundant
 
-17
-Prototypal Classes Work
-=======================
-From Dr. Axel Rauschmayer:
-<pre>
-    var PersonProto = {
-        describe: function () {
-            return "Person called "+this.name;
-        },
-    };
-    var jane = {
-        __proto__: PersonProto,
-        name: "Jane",
-    };
-    var tarzan = {
-        __proto__: PersonProto,
-        name: "Tarzan",
-    };
-    
-    console.log(jane.describe()); // Person called Jane
-<pre>
+Classes May Add Complexity
+--------------------------
 
-18
-What's the Point of Minimal Classes?
-====================================
-*Minimal classes are limited.
-*They will not be in regular use for quite awhile.
+Adding common features of classes (inheritance, subclasses, etc) 
+will obscure the inner workings of JS
 
-19
+Prototype Classes Work
+----------------------
+
+You can always write your own JS function to extend CF
+~~~~javascript
+function extend(Child, Parent) {
+     var F = function(){};
+     F.prototype = Parent.prototype;
+     Child.prototype = new F();
+     Child.prototype.constructor = Child;
+     Child.uber = Parent.prototype;
+}
+~~~~
+or use Proto.js
+https://github.com/rauschma/proto-js
+
+
+
+What's the point of Minimal Classes
+-----------------------------------
+There will be TWO ways of creating classes and that may lead to errors later on
+
+
+The need for classes in JS
+--------------------------
+
+When they (newcomers) arrive to JavaScript their concepts of how an object-oriented language works no longer apply. They learn that their big OOP investment was not complete. -Peter Michaux
+
+Professional Learning Resources
+-------------------------------
+Amazon.com results that refer to:
+  + "prototype inheritance javascript":  <pre>N(14)</pre>
+  + "class inheritance":  <pre>N(3001)</pre>
+
+
+
 Conclusion
-==========
-*The decision has been made and classes are coming to JS.
-*The good news is that under the hood classes just use the structure that JS already has to work: that means that, in theory, everybody can be happy!
+----------
 
-20
-Closing Thoughts/Extra Slide/More Conclusions
-=============================================
++ Its happening!
++ Its just syntactic sugar for prototypical classes
