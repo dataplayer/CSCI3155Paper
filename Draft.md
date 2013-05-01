@@ -22,6 +22,8 @@ JS function objects are highly versatile. They are first class citizens, so they
 >> examplained here:
 >> http://www.2ality.com/2011/06/constructor-property.html
 
+>>MG: If you would like I can go ahead and import the code examples we used in the presentation.
+
 >> lead into next topic saying like:
 >> "Does JS need a native syntax to shorten the above example?"
 
@@ -107,9 +109,8 @@ Arguments against
 
 >> lost of arguments here:
 http://www.nczonline.net/blog/2012/10/16/does-javascript-need-classes/
->> This will clearly needed to be edited for clarity, but I really wanted to get some ideas in writing. -MG
 
-While it seems like the general consensus in the field is that adding classes to JS will be a good thing, there are those who do not see a need for classes. Many people argue that you do not need classes in JS because there are already ways to effectively create "classes" through the use of constructors to define custom reference types. Furthermore, they feel that common features of classes (subclasses, superclasses, inheritance, etc) tend to cause additional confusion. You can already create custom reference types and all this change will do is to add unecessary syntactic sugar. Since the addition of classes does not alter how JS works, why bother adding it?
+While it seems like the general consensus in the field is that adding classes to JS will be a good thing, there are those who do not see a need for classes. Many people argue that you do not need classes in JS because there are already ways to effectively create "classes" through the use of constructors to define custom reference types. Furthermore, they feel that common features of classes (subclasses, superclasses, inheritance, etc) tend to cause additional confusion. You can already create custom reference types and all this change will do is to add unecessary syntactic sugar. Since the addition of classes does not alter how JS works, many in the community do not see a need to add classes at all.
 
 The addition of classes is merely a simplified way of using the features already avaialbe to JS. Many feel that you should just learn how to use the syntax already available to you. No major change is occuring - in essence, all that is happening is the the underworkings of the code are being hidden by the new class syntax. Prototypal inheritance is not that confusing once you start getting down to the details of it - and it even allows for inheritance.
 
