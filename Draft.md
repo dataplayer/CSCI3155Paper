@@ -162,16 +162,6 @@ Concluson
 
 The new class syntax proposed by in the new ECMAScript.next hides the standard details of writing prototypical classes in JS. Is hiding the details a good thing? New programmers may not understand what is going on under the hood when things go wrong when using the new syntax. The new syntax will certainly lead to nicer symantics and new JS code produced with it will be more readable and clear. At what point do we decide we've had enough turtles, Feyman? Future generations can decide this. 
 
-
-Slides for talk
-================
-5 mins worth:
->> use code snippet above to explain prototypical classes
->> use code snippet above to explain new syntax
->> mention how the new syntax is just sugar for what we are used to doing
->> mention how the new syntax works
->> don't allow time for questions! haha
-
 Citations
 ---------
 [1] Draft Specification for ES.next (Ecma-262 Edition 6) [Online] Available: <br> http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts
