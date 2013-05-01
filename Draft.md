@@ -1,3 +1,7 @@
+To-Do
+- Add direct quotations where possible.
+- Mention community when possible.
+
 The New Sugar In Your JavaScript
 =================================
 Group Members: Nicandro Flores, Megan Greening, and Brian McWilliams.
