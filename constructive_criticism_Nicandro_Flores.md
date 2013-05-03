@@ -1,11 +1,11 @@
 Constructive criticism
 ======================
 
-+ team  1:                           > good examples
-+ team  2:                           > 
-+ team  3:                           >
-+ team  4:                           >
-+ team  5:                           > a little more practice for the last team member
++ team  1: pep 3104                  > good examples
++ team  2: sip 18                    > great teamwork
++ team  3: lambdas in c++11          > awesome talk!
++ team  4: classes in ECMAScript6    > US
++ team  5: Module in ES.next         > a little more practice for the last team member
 + team  6: c++ constexpr             > good flow and examples from the community
 + team  7: pep 234 iterators         > good team work
 + team  8: Java generics             > excelent balance of information
