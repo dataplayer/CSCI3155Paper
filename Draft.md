@@ -63,10 +63,12 @@ prof.sayName()   // a method in Person.prototype
 prof.describe()  // a method in Employee.prototype
 ~~~~
 
-Though this seems quite elaborate, but many of these steps are easily wrapped in functions. Many JS programmers have embraced these . So much so that JS evagelist, Duglas Crockford, clearly lays out short and efficient methods to deal with prototype chaining in his book, JavaScript, The Good Parts.
+Though this seems quite elaborate, many of these steps can be easily condensed into functions. JS evangelists such as Dr. Axel Raushmayer and Douglas Crockford have written extensivly on these topics [6][7]. These ideas are common knowledge to seasoned JS programmers, but someone new to the language may find the prototypical inheritance pattern awkward and may be easily disuaded from further learning the JS language.
 
 
 
+
+>> I can add a section here that talks about Proto.js and the extend(Child,Parent) function if we have to
 ====== let make sure to say more about what the community thinks =====
 
 
@@ -78,7 +80,7 @@ Though this seems quite elaborate, but many of these steps are easily wrapped in
 >> If we need other examples use:
 >> http://www.2ality.com/2012/01/js-inheritance-by-example.html
 >> Point out the use of call(), may need to meniton apply() and bind() too
->> and how they are used to switch context.
+>> and how they are used to switch context. (not part of the topic anymore)
 >> Point out the renaming of Employee.prototype.constructor to Employee which
 >> examplained here:
 >> http://www.2ality.com/2011/06/constructor-property.html
@@ -233,4 +235,8 @@ Citations
 
 [4] "Using Object Literals as Classes" discussion thread (67 replies) [Online] Available: <br> https://mail.mozilla.org/pipermail/es-discuss/2012-March/021253.html
 
-[5] "ECMAScript.next: classes" 2ality JavaScript nad More Blog Dr. Axel Rauschmayer [Online] Available: <br> http://www.2ality.com/2012/07/esnext-classes.html
+[5] "ECMAScript.next: classes" 2ality JavaScript and More Blog Dr. Axel Rauschmayer [Online] Available: <br> http://www.2ality.com/2012/07/esnext-classes.html
+
+[6] "JavaScript quirks" 2ality JavaScript and More Blog, Dr. Axel Raushmayer [Online] Available: http://www.2ality.com/2013/04/12quirks.html
+
+[7] "JavaScript The Good Parts" by Douglas Crockford, May 2, 2008, O'Rielly. Page 57 Section 3.5 Prototypes
